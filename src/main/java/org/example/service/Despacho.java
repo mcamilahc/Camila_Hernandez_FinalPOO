@@ -11,6 +11,13 @@ public class Despacho {
 
     private String nombreMen;
     private String idMen;
+    public List<Paquete> paquete;
+
+    public Despacho(String nombreMen, String idMen, List<Paquete> paquete) {
+        this.nombreMen = nombreMen;
+        this.idMen = idMen;
+        this.paquete = new ArrayList<>();
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -24,11 +31,6 @@ public class Despacho {
         return Objects.hashCode(idMen);
     }
 
-    public List<Paquete> paquete;
-
-    public Despacho() {
-        this.paquete = new ArrayList<>();
-    }
 
 
 
